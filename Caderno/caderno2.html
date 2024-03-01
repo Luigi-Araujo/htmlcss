@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Módulo 2</title>
+    <style>
+        @font-face {
+            font-family: potato;
+            src: url(fonts/potato.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="Caderno.htm">Voltar ao módulo 1</a></p>
+    <h2>Cores</h2>
+
+    <p style="background-color: blue; color: white;">Há várias formas de utilizar cores para html com css. A primeira e mais básica é pelo nome das cores</p>
+
+<img src="imagens/colorname.png" alt="Color name">
+
+    <p style="background-color: #0000ff; color: #ffffff;" >A segunda forma é pelo código Hexadecimal de cada cor.</p>
+
+<img src="imagens/hexacode.png" alt="">
+
+    <p style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">A terceira é pelo código hsl (hue, saturation, luminsity) de cada cor</p>
+
+<img src="imagens/hsl.png" alt="">
+
+    <p style="background-color: #0000ff; color: #ffffff;">A última e mais prática é pelo menu de cores do visual studio, que oferece formatação nos códigos anteriores</p>
+
+<img src="imagens/colormenu.png" alt="">
+
+<hr><hr>
+<h2>Gradientes</h2>
+<p >Na linguagem css, gradientes podem ser inseridos (inline, internal ou external) por meio da tag background-image, definindo o bg como linear-gradient, dando entre parenteses uma direçao ou angulo, cores na ordem e porcentagem do espaço ocupado pelas cores. Veja o exemplo na <a href="gradiente.html" target="_blank">Página gradiente</a></p>
+<img src="imagens/gradientecerto.png" alt="">
+<p>Repare que no código da página gradiente, além de definir o gradiente, foi necessário definir um seletor '*' com height: 100%, para que o gradiente ocupasse o total da página. Podemos inserir também uma fixação de background com background-attachment:fixed, ainda dentro do seletor body, para que ele nao role.</p>
+
+<h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 2.5em;">Fontes</h2>
+<p>É possível editar diversos atributos de uma fonte através de css. Vamos analisar os principais atributos.</p>
+<ul>
+    <li><p>font-style: Recebe valores, como italic</p></li>
+    <li><p>font-weight: Define light, bold, bolder, normal</p></li>
+    <li><p>font-size: recebe de preferencia um valor em 'em' onde 1em é o tamanho padrão da fonte</p></li>
+    <li><p>font-family: Define uma ordem de tentativas de fontes padrão. Possível usar termos gerais como serif ou sans-serif.</p></li>
+</ul>
+<img src="imagens/fontfull.png" alt="">
+<p>Alternativamente, podemos usar o shorthand:
+    <code style="color: rgb(5, 66, 5); font-weight: bolder;">font: normal light 3em Arial, Helvetica, sans-serif;</code>
+</p>
+    <img src="imagens/fontshorthand.png" alt="">
+<p>Repare que no exemplo de shorthand, os valores dos atributos não são separados por vírgula. As fonte por sua vez, são.</p>
+<p>Além dos exemplos acima ainda é possível usar o atributo font-decoration para sobre ou sublinhar, riscar ou tracejar fontes.</p>
+<h3 style="font-family: potato, sans-serif;">Fontes Externas</h3>
+<p> É possível trebalhar com fontes externas, que tenham sido baixadas e armazenadas nos formatos (geralmente) otf e/ou ttf. Para isso, é necessário criar uma regra @font-face no arquivo css ou na tag style, possuindo a url dos ARQUIVOS  OTF e TTF e definindo um formato ('truetype ou opentype') um nome para ser usado como font family. É interessante setar o weight e style como normal dentro da regra. <br>
+    url e o format (dentro do src: devem ir com ("")).
+
+</p>
+<img src="imagens/fontface.png" alt="">
+<img src="imagens/potato.png" alt="">
+
+<p>Note que foi adicionado um sans serif inline, caso o potato não carregue.</p>
+
+
+<h2>Alinhamento de texto</h2>
+<p>O texto pode ser alinhado a left right center ou justify adicionando um parametro text align dentro do seletor a ser alinhado, na folha de estilo. É possível usar o text indent para adicionar espaçamento de parágrafo.</p>
+
+<h2>Seletores personalizados</h2>
+<p>Existem 4 tipos de seletores personalizados nas CSS. o id, o class, as pseudo classes e os pseudo elementos.</p>
+<h3>ID</h3>
+<p>Ao inserir, dentro de uma tag, a propriedade id="nome", podemos separá-la das demais tags semelhantes ao estilizar no css. basta utilizar #nome ou h1#nome por exemplo como seletor, e definir as características que queremos que sejam diferentes. Na ausência de especificações, a estilização geral da tag comanda o resultado</p>
+<img src="imagens/id.png" alt=""><br>
+<img src="imagens/hash.png" alt="">
+<p>A primeira imagem mostra a delimitação de um id no código HTML, enquanto a segunda mostra um seletor com referencia a esse id no código CSS</p>
+
+<h3>CLASS</h3>
+<p>Ao contrário das ids, podemos usar a mesma class em diversas tags/elementos, para agrupá-los em suas configurações no CSS. Neste caso, adicionamos a propriedade class="nome" nas tags que queremos classificar e no CSS usamos .nome como seletor para configurar todos os elementos da classe.</p>
+<p>Vale lembrar que um elemento pode pertencer a mais de uma class, com configurações de estilo distintas.</p>
+<img src="imagens/inter1.png" alt=""><br>
+<img src="imagens/inter2.png" alt=""><br>
+<img src="imagens/class.png" alt=""><br>
+<p>Note que nas duas primeiras imagens classificamos elementos diferentes na mesma class no código html, e na terceira usamos .intermediário para configurar ambas de uma vez.</p>
+<hr>
+
+<h3>PseudoClass</h3>
+<p>Uma pseudoclasse é um seletor de estilo (demarcado por :) que busca configurar um elemento, tag, classe ou id em um estado específico. Aprendemos até agora 3 pseudo classes diferentes:</p>
+<ul>
+    <li>:hover que configura o que acontece quando se passa p mouse por cima de algo;</li>
+    <li>:active que configura o estado de algo enquanto ativo (um link ao ser clicado por exemplo);</li>
+    <li>:visited que configura a aparência de um link já visitado por exemplo.</li>
+</ul>
+<h3>Pseudo Elementos</h3>
+Os pseudo elementos podem ser muitas vezes certos conteúdos de demarcação adicionados por meio de css. Os exemplos da aula foram ::after e ::before, que quando possuem o parametro content fazem o que foi descrito.
+
+<h2>O modelo de caixas</h2>
+
+<p>Trabalhamos em html e css com um modelo de caixas, que abriga o conteúdo dentro das mesmas. Caixas possuem vários elementos internos e podem ser aninhadas dentro de outras caixas indeterminadamente.</p>
+<p>Os dois tipos de caixas são: <ul type="square">
+    <li>Box level, que quebram linha obrigatoriamente e se isolam de outros conteúdos;</li>
+    <li>Inline level, que não quebram linha e se mergem com o conteúdo em que  estão inseridas.</li>
+</ul></p>
+<p>Parágrafos e h1 são exemplos de box level, enquanto uma âncora 'a' é um exemplo de inline level.</p>
+<h3>Os elementos de uma caixa</h3>
+<p>Caixas possuem, de dentro para fora, conteúdo, padding, border e margin. <br>Usando o DevTools do chrome, é possível visualizar e brincar com essas configurações sem alterar o código fonte.</p>
+
+<h2>Propriedades de cada elemento de uma caixa</h2>
+<p>PROPRIEDADES - <br>MARGIN: As principais Propriedades de Estilo para margin são: <br> " margin-top " (margin da parte de cima de um elemento), <br>  " margin-right " (parte direita), <br> " margin-bottom " (parte de baixo) e <br> " margin-left " (parte esquerda) <br> - O valor dessas propriedades geralmente é inserido em px. <br>
+
+    Nota: Para centralizar um elemento (CAIXA) na tela, de forma automática , devemos usar a Propriedade de Estilo " margin " com o valor " auto ". Isso fará com que elementos (caixas) sejam centralizados horizontalmente de forma automática, mesmo que o tamanho da tela mude. <br>
+    
+    Como no "padding", também existe um SENTIDO/ORDEM correta PARA INSERIR as propriedades de margin descritas logo acima. A "direção" correta é: <br>
+    
+    <ul>
+        <li>Top</li> 
+        <li>Right</li> 
+        <li>Bottom</li> 
+        <li>left</li> 
+    </ul>
+    <br>
+    Exemplo: <br>
+    
+    margin-top: 10px; <br>
+    margin-right: 10px; <br>
+    margin-bottom: 10px; <br>
+    margin-left: 10px; <br>
+    
+    É importante declarar nessa ordem, pois é necessário ser condizente com a direção e sentido padrão do Modelo de Caixas do DevTools , que segue a direção de um ponteiro de relógio.
+    
+    Também podemos utilizar uma Shorthand para inserir e simplificar todas essas declarações de margin em uma única linha, exemplo: <br> " margin: 15px 10px 10px 15px; " <br>
+    
+    OBSERVAÇÃO: Mesmo em shorthands como a do exemplo acima, os valores devem ser declarados na ordem orientada ( top, right, bottom e left ), para que consigamos nos nortear e especificar corretamente o espaçamento certo o para respectivo lado/sentido.
+    
+    Se quisermos configurar os quatro lados do margin de uma só vez e constituir um margin igualitário (mesmo valor nos quatro lados), podemos simplesmente inserir uma única vez a Propriedade "margin" com o valor em px desejado, esse valor será inserido nos quatro lados do elemento automaticamente , exemplo: " margin: 10px; "
+    
+    IMPORTANTE : Se quisermos centralizar um elemento (CAIXA) de forma automática, mas ainda assim , alterar o margin do sentido de cima (top) ou de baixo (bottom), devemos inserir a seguinte declaração shorthand: " margin: 10px auto 10px auto; " 
+    
+    Também podemos colocar só dois valores em uma propriedade margin, exemplo: " margin: 10px 20px; " - Quando colocamos somente dois valores, significa que os sentidos de CIMA E DE BAIXO são representados pelo primeiro valor e os sentidos de ESQUERDA E DIREITA são representados pelo segundo valor .
+    
+    PROPRIEDADES - OUTLINE: As principais Propriedades de Estilo para outline são: " outline-width " (espessura da outline), " outline-style " (estilo da outline) e " outline-color " (cor da outline).
+    
+    Os valores mais utilizados para a Propriedade de Estilo que define o estilo de uma outline (outline-style), são: " solid " (linha sólida), " dashed " (outline tracejada), " dotted " (outline pontilhada), " double " (linha dupla) e o " groove " (outline "3d")
+    
+    Sendo que podemos utilizar uma shorthand para inserir e simplificar todas essas declarações de outline em uma única linha, exemplo: " outline: 10px solid black; " (Siga a ordem de inserção de valores do exemplo na hora de usar uma shorthand, caso contrário não funcionará corretamente)  </p>
+
+
+    <h2>Grouping tags</h2>
+    <p>Podemos agrupar as tags usando classes e ids para mais fácil configuração no css.</p>
+    
+
+
+
+<!---->
+
+<hr><hr><hr><hr><hr><hr>
+
+<!---->
+
+<h2>Nota 1</h2>
+<p>Certos comandos, chamados de regras, precisam ser colocados no início de documentos css com um @. O maior exemplo é o charset, mas isso também se aplica, por exemplo, a importação de fontes do google fonts. Nesse caso, a própria plataforma oferta o código a ser colado.</p>
+<img src="imagens/charset.png" alt="">
+<img src="imagens/import.png" alt="">
+
+<h2>Nota 2</h2>
+<p>As id="nome" em HTML são referenciadas com #nome em CSS. <br>As class="nome" em HTML são referenciadas com .nome em CSS.</p>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+        @charset "UTF-8";
+        
+        body {
+            background-color: lightgoldenrodyellow;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        h1{
+            color: rgb(10, 135, 245);
+        }
+        h2{
+            color: rgb(10, 255, 245);
+        }
+        
+ 

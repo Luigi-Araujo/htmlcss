@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Prática de código simples.</title>
+    <style>
+        mark{background-color: rgb(255, 71, 71);}
+    </style>
+</head>
+<body>
+    <h1>Código geral</h1>
+    <p>Ao começar a desenvolver, o comando !+Enter introduz automáticamente o código base necessário para um site em html. Geralmente será necessário apenas alterar o idioma para pt-br e introduzir um título diretamente no código. Além de inserir o código base, o comando introduz as tags head e body, que dividem o documento em um espaço onde será definido o título e as "meta informações" do documento, e um espaço para o corpo, o documento em si. </p>
+    <p>Títulos em geral possuem a Tag h1. Lembrando que a tag de abertura possui &lt;&gt;, e a Tag de fechamento possui além destes, uma / antes do nome da tag. </p>
+    <hr>
+    <p>A linha acima é impressa com a tag &lt;hr&gt;, enquanto quebras de linha são inseridas com a tag &lt;br&gt;</p> 
+    <p>É possível imprimir emojis e caracteres especiais a partir de códigos específicos: &#x1F480;&copy; </p>
+    
+
+
+    <hr><hr>
+    <h1>Imagens</h1>
+        <p>Imagens devem ser de preferência pequenas, como 300x300 (em geral), e podem ser inseridas de formas diferentes. Elas podem se encontrar na pasta do código em que estão sendo inseridas, em subpastas dessa pasta, ou até mesmo ser carregadas de fontes externas, a partir de uma URL de imagem. </p>
+        <p>Ao digitar img e apertar enter no console, o código de imagem surgirá, com duas áreas de aspas a ser complementadas: a área src e a área alt. A área src indica a fonte ou o caminho da imagem, e usando o atalho control backspace, podem ser selecionadas imagens da pasta do código e suas subpastas. Caso a imagem a ser inserida seja de fontes externas, basta inserir a URL neste campo. Já a área alt irá conter o texto alternativo, a ser disponibilizado caso por algum motivo a imagem não possa ser corretamente carregada. Esta é a aparência de uma tag de imagem vazia:
+        </p>
+        <img src="imagens/codigoimagemcorreto.png" alt="Exemplo de tag img">
+        <p>Esta é a aparência de uma tag de imagem cheia:</p>
+        <img src="imagens/codigofull.png" alt="Tag img preenchida">
+        <P>Note, que no exemplo acima, a imagem a ser inserida se encontra numa subpasta de nome "imagens".</P>
+    <hr>
+    <h1>Adicionandoo um FavIcon</h1>
+        <p>FavIcon é o nome do ícone que fica junto ao título do site, na barra de guias. </p>
+        <p>É ideal que o ícone esteja no formato .ico, e aprendemos três maneiras diferentes <br></p>
+        <p>-iconarchive.com para pesquisar ícones; <br>-favicon.cc para desenhar ícones;<br>-favicon.io para converter png, texto ou emojis em ícones.</p>
+        <hr>
+        <p>Para de fato inserir o ícone, basta digitar a tag link no console (acima do título do site, na aba "head") e selecionar a tag favicon, usando ctrl+backspace para selecionar o arquivo de ícone correto dentro da pasta. Abaixo está um exemplo da tag neste mesmo documento, vide o FavIcon.</p>
+        <img src="imagens/codigofavicon.png" alt="Tag de ícone preenchida com o ícone deste site.">
+        <hr>
+        <h1>Sobre Títulos/Headings</h1>
+        <p>Os títulos seguem uma hierarquia lógica de títulos e subtítulos. essa hierarquia vai de h1 a h6. É importante lembrar que não é correto utilizar a hierarquia de títulos como uma ferramenta para dimensionar o texto, já que isso será feito através do css. Abaixo um exemplo de um título h1, com dois subtítulos h2, onde um deles possui texto e o outro possui dois subtítulos h3, ambos com texto. Abaixo do exemplo está uma imagem do código que o gerou. </p>
+        <hr>
+        <h1>Lorem ipsum, dolor sit amet!</h1>
+            <h2>Consectetur adipisicing elit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam ex praesentium in modi! Eos amet quisquam veritatis maxime, quod sunt incidunt provident! Molestiae illum nemo odio nesciunt libero natus?</p>
+            <h2>Veritatis accusamus corrupti rerum </h2>  
+                <h3>Lorem ipsum dolor sit</h3>  
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores mollitia perferendis, exercitationem culpa cumque quos eaque cum facilis animi, placeat alias rem incidunt nobis voluptatum sunt ut aliquid quo error!</p>
+                <h3>Lorem ipsum dolor sit</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptate accusantium excepturi ex dolore mollitia error sint, cum repudiandae quis iure voluptatem adipisci facilis enim optio, aliquid laudantium quo deserunt?</p>
+        <img src="imagens/headingscode.png" alt="Código que gerou o texto acima, separado em subtítulos.">
+        <hr>
+        <h1>Semântica e forma</h1>
+            <p>É importante lembrar que o html, com a sua versão mais recente, passou a focar em semântica, significado, deixando a forma para ser trabalhada pelo css. Isso significa que existem algumas tags e funções, que apesar de funcionarem, não estão mais em conformidade com o padrão, pois entram em conflito com o css3. como por exemplo a centralização de título com a tag center antes e depois da tag h1, a cor de fundo com a tag bgcolor dentro da abertura da tag body. e até mesmo a cor das letras com a tag font color. Tags vermelhas no console indicam não funcionamento, apesar de algumas obsoletas não ficarem vermelhas ainda. Abaixo um exemplo de código com tags obsoletas, utilizadas no html4</p>
+        <img src="imagens/html4.png" alt="Código usando escrita de html4">
+        <p>Note que enquanto algumas tags obsoletas ficam automaticamente vermelhas, algumas outras como font color, não ficam, pelo menos não inteiramente.</p>
+            <h2>Tags Obsoletas e funções ainda existentes</h2>
+            <p>Existem algumas tags <strong>semânticas</strong> que alteram a forma do texto por suas características. Essas  tags devem ser priorizadas no lugar de suas contrapartes de forma. Como exemplo temos <br><strong>Negrito</strong>, que utilizava a tag "u" e agora utiliza a tag "strong";<br><em>Itálico</em>, que utilizava a tag "i", e agora utiliza "em" (emphasis).</p>
+            <p>No total, foram abordadas nas aulas as funções de negrito, itálico, marcado, grande, pequeno, deletado, inserido, sobrescrito e subscrito: </p>
+            <p><strong>Negrito</strong> <br>
+            <em>Itálico</em><br>
+            <mark>Marcado</mark><br>
+            <big>Grande(obsoleto)</big><br>
+            <small>Pequeno</small><br>
+            <del>Deletado</del><br>
+            <ins>Inserido</ins><br>
+            sobre<sup>scrito</sup> <br>
+            sub<sub>scrito</sub><br>             </p>
+            Os resultados acima foram obtidos, respectivamente com as tags: <br>Strong;<br>Em;<br>Mark;<br>Big;<br>Small;<br>Del;<br>Ins;<br>Sup;<br>Sub. <br>
+            <h2>Código-Fonte</h2>
+    <p>O comando <code>document.getElementById('teste')</code> está em linguagem Javascript. Ele está envelopado numa tag code para que o navegador reconheça que é um código e o formate em uma fonte monoespaçada.</p>
+    <p>Apenas a tag code não formata as quebras de linha e espaçamentos do codigo como no console, para isso é necessário envelopar a tag code em uma tag pre. O código abaixo (python) está envelopado em tags code e estas estão envelopadas em tags pre.</p>
+        <pre><code>
+    num = int(input('digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é PAR')
+    else:
+        print(f'O número {num} é ÍMPAR)
+    print('Fim do programa')
+            </code></pre>
+
+            <h2>Citações simples</h2>
+            <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q></p>
+            <p>Esta citação foi feita com a tag q.</p>
+            <p> Segundo fulano no livro tal:</p>
+                <blockquote cite="loremipsumblabla.com"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt veritatis voluptas maiores deserunt et in unde voluptate ex distinctio hic veniam molestias, similique ipsam natus eligendi magni totam. Perferendis, dignissimos?</blockquote>
+            <p>A citação acima foi feita com o comando blockquote e usando um link como valor do atributo cite= dentro da tag de abertura, para referenciar a citação.
+            </p>
+    <h2>Abreviações</h2>
+    <p>Estamos estudando <abbr title="Hypertext Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+    <p>Acima usamos a tag abbr para dar um sentido a uma explicação mediante passagem do mouse.</p>
+
+    <h2>Texto invertido</h2>
+    <p><bdo dir="rtl">ESTOU APRENDENDO A CRIAR COISAS COM HTML</bdo></p>
+    <P>Esse texto foi gerado com uma tag bdo, utilizando rtl como o valor do atributo dir (direção).</P>
+    
+    <h1>Trabalhando com Listas</h1>
+            <h2>Listas Ordenadas</h2>
+            <p>Listas ordenadas, da tag ol, são uma maneira fácil de manter uma lista numerada, que se organiza automaticamente no caso de adição posterior nos itens de tag li do meio</p>
+        <ol>
+            <li>Fazer isso</li>
+            <li>Fazer aquilo</li>
+            <li>Fazer aquilo outo</li>
+            <li>Fazer num sei que mais</li>
+            <li>Adiantar o ngç lá</li>
+        </ol>
+        <img src="imagens/ordenada.png" alt="Lista ordenada">
+        <p>Adicionando o parâmetro type= na abertura de ol (podendo adicionar um parâmetro start para alterar o ponto de partida), é possível escolher entre alguns tipos de listagem:</p>
+        <ol type="A" start="3">
+            <li>Fazer isso</li>
+            <li>Fazer aquilo</li>
+            <li>Fazer aquilo outo</li>
+            <li>Fazer num sei que mais</li>
+            <li>Adiantar o ngç lá</li>
+        </ol>
+        <img src="imagens/ordenada alterada.png" alt="Lista ordenada com alteração de type e start">
+        <h2>Listas não ordenadas</h2>
+        <p>Nas listas não ordenadas a ordem não importa. é apenas uma sequência de itens.</p>
+        <ul type="square">
+            <li>pão</li>
+            <li>azeite</li>
+            <li>arroz</li>
+            <li>oleo</li>
+            <li>manteiga</li>
+        </ul>
+        <img src="imagens/não ordenada.png" alt="Lista não ordenada">
+        <p> também podem ser configuradas com parametro type, com os valores disc, circle e square.</p>
+<h2>Lista  de coisas com subitens</h2>
+<p>É possível criar listas dentro de um item de uma lista, independente de ol ou ul.</p>
+
+<h3>Melhores jogos de cada plataforma que já joguei.</h3>
+    <ul type="square">
+        <li>Playstation 1</li>
+            <ol>
+                <li>Spiderman</li>
+                <li>Toy Story 2</li>
+                <li>Tarzan</li>
+                <li>Worms</li>
+            </ol>
+        <li>Playstation 2</li>
+            <ol>
+                <li>Ratchet & Clank 2</li>
+                <li>Looney Tunes: Back in Action</li>
+                <li>Star Wars III</li>
+                <li>Buzz</li>
+            </ol>
+        <li>Playstation 3</li>
+            <ol>
+                <li>Uncharted 2</li>
+                <li>The Last of Us</li>
+                <li>Ratchet & Clank: a Crack in Time</li>
+                <li>Infamous 2</li>
+            </ol>
+        <li>Playstation 4</li>
+            <ol>
+                <li>The Last of Us II</li>
+                <li>Red Dead Redempetion 2</li>
+                <li>Uncharted 4</li>
+                <li>Bioshock: Infinite</li>
+                <li>Journey</li>
+            </ol>
+    </ul>
+<img src="imagens/listwithin.png" alt="Código que imprimiu o texto acima.">
+
+<h2>Lista de Definição</h2>
+    <p>Esta lista de tag dl cria algo similar a um dicionário, com um termo de tag dt e uma definição de tag dd. Aparentemente pode ser usado para definir um objeto e dar uma explicação, semanticamente falando</p>
+    <dl>
+        <dt>Playstation</dt>
+        <dd>Primeiro Console da Sony e o meu primeiro console. Inovação em gráficos 3D.</dd>
+        <dt>Playstation 2</dt>
+        <dd>Console que popularizou no Brasil o jogo eletrônico. Provavelmente o mais vendido do mundo.</dd>
+        <dt>PS3</dt>
+        <dd>Inovou em gráficos, sendo o primeiro a ter jogos considerados extremamente realistas para a época.</dd>
+        <dt>PS4</dt>
+        <dd>Grandes avanços tecnológicos, com carregamentos mais rápidos e novas possibilidades gráficas.</dd>
+    </dl>
+    <img src="imagens/dl dt dd.png" alt="Código do texto acima.">
+    <hr><hr>
+    <h1>Trabalhando com links</h1>
+    <h2>Links Externos</h2>
+    <p>Links são a base da navegação como a conhecemos. Links usam a tag 'a', e se aproveitam de atributos como ref=; rel=; e target=, para definir a URL de destino, a relação do destino com o site atual e o local alvo de abertura do novo site. <br> O atributo ref, contém a url de destino ou o nome do documento de destino. <br>O atributo rel, contém valores como next, prev, external e nofollow. <br>O atributo target possui os valores _self para abrir na mesma aba, _blank para abrir em uma nova aba, entre outros menos relevantes. <br>Exemplo:</p>
+    <p>Acesse meu <a href="https://youtube.com/@meuluila?si=wRxQy1kbr3NJ48x_" rel="external" target="_blank">canal no youtube!</a></p>
+    <p>Você também pode me seguir no <a href="https://www.instagram.com/ofcluiaraujo/" rel="external" target="_blank">meu Instagram!</a></p>
+<img src="imagens/linkext.png" alt="Código de 2 links">
+    <p>Na imagem acima, os textos <mark>"canal no youtube!"</mark> e <mark>"meu Instagram!"</mark> se tornaram hyperlinks. O valor external no atributo 'rel', define que o destino é um site externo ao atual, e o valor _blank no atributo target define que o destino deve ser aberto em uma nova aba. </p>
+    <h2>Links internos</h2>
+    <p>Usamos links internos quando queremos direcionar o user a uma página no próprio site/servidor:</p>
+    <p>Acesse a <a href="Exemplo1.html" rel="next" target="_self">página de exemplo 1</a> (mesma pasta).</p>
+    <p><a href="imagens/subdest.html">Este link</a>, levará a um documento que se encontra em uma subpasta (imagens). para fazer o inverso é necessário usar o comando linux ../ no atributo de ref, antes do nome do destino</p>
+    <p>Abaixo, o código necessário para voltar desse arquivo em subpasta para este.</p>
+    <img src="imagens/codretsub.png" alt="">
+    <h2>Links de Download</h2> 
+    <p>O link de download segue a mesma tag de âncora, com o ref contendo o caminho do documento, o parametro download com valor igual ao nome do documento, e o parâmetro type definindo o tipo/extensão do arquivo, baseado no <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">Iana Assignment Media types</a> (application/zip por exemplo).
+    </p>
+    <hr><hr><hr>
+    <h1>Mídias</h1>
+    <h2>Mídias dinâmicas</h2>
+    <p>É necessário adaptar imagens para que carreguem em tamanhos adequados para o navegador em que estão sendo visualizadas. Para isso inserimos a nossa tag img em uma tag picture, que terá antes do img, em ordem crescente, tags source para definir as alternativas de carregamento. <br>É interessante que o arquivo da tag img seja o maior, e os menores estejam em ordem crescente nos sources acima.</p>
+    <p>Cada tag source (mediatyoe) deve definir:</p>
+    <ul>
+        <li>Parâmetro media, com o maxwidth do navegador</li>
+        <li>Parâmetro srcset, com o caminho e nome do arquivo a ser carregado dentro da maxwidth</li>
+        <li>Parâmetro type, com o código do tipo de arquivo, do IANA (geralmente picture/png)</li>
+    </ul>
+    <p>A imagem abaixo é adaptativa para com os tamanhos de navegador, e está seguida pelo código que a imprime:</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/fotop.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/fotom.png" type="image/png">
+        <img src="imagens/fotog.png" alt="fotog">
+    </picture>
+    <img src="imagens/codigo-imagem-dinêmica.png" alt="">
+    <p>O tamanho usado para esta prática foi de 300, 700 e 1000 px para cada tamanho de imagem.</p>
+    
+    <h2>Áudios</h2>
+    <p>A tag audio permite a reprodução de audios no navegador, e pode ser utilizada com seu set automatico audio (prompta a definição de src) ou com varios source:src entre suas tags. Desta segunda forma, podemos definir uma ordem de carregamento de vários tipos de arquivo, e até mesmo uma mensagem com prompt de download do arquivo caso nenhum carregamento seja bem sucedido.</p>
+
+    <p>Dentro da tag de abertura do Audio é possível estabelecer 4 atributos:</p>
+    <ul type="square">
+        <li>Preload ("metadata"; "none"; "auto");</li>
+        <li>Controls</li>
+        <li>Autoplay</li>
+        <li>Loop</li>
+    </ul>
+    <p>Abaixo, um áudio e o código que o colocou na página.</p>
+    <audio controls preload="auto" loop>
+        <source src="midia/track.ogg" type="audio/ogg">
+        <source src="midia/track.mp3" type="audio/mpeg">
+        <p>O seu navegador não tem suporte a reprodução de áudio.<a href="midia/track.mp3"> Baixe o arquivo mp3!</a></p>
+    </audio>
+    <!--NUNCA MAIS USAR OGG-->
+<img src="imagens/audiocode.png" alt="">
+<p>No código acima, o navegador tenta carregar o arquivo ogg (apenas quando o user clica em play, graças ao atributo preload). Em caso de falha, tenta carregar o mp3. Em caso de falha imprime a frase "O seu navegador não tem suporte a reprodução de áudio.Baixe o arquivo mp3!" com um link para Download.</p>
+<h2>Vídeos</h2>
+<p>Vídeos podem ser hospedados internamente ou em sites especializados como o youtube e o vimeo.</p>
+<h3>Hospedagem local</h3>
+<p>Para carregar um vídeo hospedado localmente basta usar a tag video. a Tag vai pedir um src, (q pode ser selesionado com ctr bs) mas também aceita os parâmetros width, controls e poster. Alternativamente a definir o src na tag de abertura, podemos abrir varias source src entre as tags video para, carregar o mesmo arquivo em vários formatos adicionando o parametro type (IANA). similar ao áudio.</p>
+<video controls poster width="500">
+    <source src="midia/Video.mp4" type="video/mp4">
+    <source src="midia/Video.webm" type="video/webm">
+    <source src="midia/Video.mkv" type="video/mp4">
+</video>
+<br> 
+<img src="imagens/videosrc.png" alt=""> <br>ou <br> <img src="imagens/videosource.png" alt="">
+
+<h3>Hospedagem externa</h3>
+<p>Bem mais simples, econômica e prática, apesar de ter suas desvantagens. basta acessar um site e clicar em compartilhar>incorporar>copiar, e colar o código no console.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/casKRon9oM0?si=T0op6oFHCByUybm_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<hr><hr><hr><hr><hr><hr>
+<hr>
+<hr>
+<h1>Um pouco de CSS</h1>
+    <p>Uma observação interessante feita na aula: adicionar um atributo de style dentro de uma tag <mark style="background-color: aqua;">(alterar a cor do fundo de um texto marcado, por exemplo)</mark>, atribui essa alteração estilística apenas ao conteúdo da tag alterada.</p>
+    <p>No entanto, é possível atribuir uma mesma alteração de estilo para todos os elementos de um mesmo tipo (aparentemente de mesmas tags), usando a tag style dentro da head do documento, e criando um seletor {} com o nome dos <mark>elementos</mark> a serem alterados, o <mark>atributo</mark> a ser alterado, e o <mark>valor</mark> a ser atribuído. Abaixo exemplos de ambas as situações.</p>
+    <img src="imagens/bgstindividual.png" alt="Neste exemplo o código foi inserido dentro da tag mark, e por isso só se aplica ao texto que essa tag engloba.">
+    <p>Neste exemplo o código foi inserido dentro da tag mark, e por isso só se aplica ao texto que essa tag engloba.</p>
+    <img src="imagens/mrkstgeral.png" alt="Neste caso, a tag de style foi utilizada diretamente na head do documento, e possui um seletor mark, com atributo background color e valor salmão. Por isso, a alteração é aplicada a todos os elementos mark que não possuem o atributo especificado">
+    <p>Neste caso, a tag de style foi utilizada diretamente na head do documento, e possui um seletor mark, com atributo background color e valor salmão. Por isso, a alteração é aplicada a todos os elementos mark que não possuem o atributo especificado.</p>
+    <p>Além destes dois modos, há a melhor maneira de usar estilos css, que é criar um documento .css na pasta, e fazer um link:css na head. dentro do documento css configuramos o estilo.</p>
+
+    <p ></p>
+    
+    <hr><hr><hr><hr><hr><hr>
+
+    <p style="font-size: 40px;">Fim do Módulo 1. <a href="caderno2.html">Ir para o módulo 2</a></p>
+
+<!--Início das anotações-->
+    <hr><hr>
+    <h2>Nota:</h2>
+    <p>Para facilitar a escrita de código, é possível englobar um texto selecionado dentro de uma tag, usando o atalho ctrl+shift+p, selecionando a opção "wrap with abbreviation" e escrevendo a abreviação da tag, que seria utilizada diretamente no código.</p>
+    <h2>Nota 2:</h2>
+    <p>É possível segurar alt e clicar em vários espaços ou tags, para editá-los igualmente de uma só vez.</p>
+    <h2>Nota 3</h2>
+    <p>Ao usar o menu ctrl+backspace, arquivos de parent folders não aparecem. É necessário usar o comando ../ (linux) antes do nome do arquivo que se incontra na pasta mãe da pasta atual. O comando ../ significa voltar uma pasta na linguagem linux.</p>
+    <h2>Nota 4</h2>
+    <p>o atalho ul>li*4 cria uma unordered list com 4 li's. pode ser adicionado um >p para conter um par de tags p em cada li e até mesmo >p>a para que dentro de cada tag p haja uma tag a. podemos ainda adicionar *# (asterisco e número) para multiplicar o número de tags geradas em cada uma das tags anteriores.</p>
+    
+    
+    
+    <ul>
+        <li>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+        </li>
+    </ul>
+    <h2>Nota 5</h2>
+    <p>um trecho de código selecionado pode ser movido usando alt+setas.</p>
+    <h2>Nota 6</h2>
+    <p>Handbrake é um ótimo conversor de vídeos, apesar de que é mais vantagem hospedar um vídeo no yt ou vimeo.</p>
+</body>
+</html> 

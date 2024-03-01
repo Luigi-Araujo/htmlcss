@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{background-color: white;
+               padding: 10px;
+               margin: 15px;
+        }
+        nav{
+            background-color: rgb(99, 99, 99);
+            padding: 8px; 
+            box-shadow: 3px 3px 5px 0px #9f9d9d;
+                    
+        }
+        nav > a {
+            text-decoration: none;
+            color: white;
+            margin-right: 30px;
+        }
+        nav>a:hover{
+            text-decoration: underline;
+            color: blue;
+            
+        }
+        main{background-color: white;
+               padding: 10px;
+               margin: 10px 15px;
+               border-radius: 20px;
+
+        }
+        article{background-color: lightgrey;
+                padding: 5px 5px 1px 5px;
+                border-radius: 0px 0px 10px 10px;
+                margin: 5px;
+                box-shadow: 3px 3px 5px 0px #9f9d9d;
+            }
+
+        footer{background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            margin: 0px;
+        }
+        footer>p{margin: 0px;}
+        article > aside{
+            background-color: rgb(99, 99, 99);
+            color: black;
+            padding-left: 20px;
+            border-radius: 0px 0px 5px 5px;
+            margin-bottom: 5px;
+            
+        }
+        article>aside>p{
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </nav>
+    </header> 
+   
+    <main>
+            <section id="assuntos">
+                <ul type="square">
+                    <li>Esportes</li>
+                    <li>Moda</li>
+                    <li>Tecnologia</li>
+                </ul>
+
+            </section>
+            <section id="noticias">
+                <article>
+                    <h2>Notícia importante</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit beatae excepturi. Veniam repudiandae error temporibus blanditiis autem veritatis sit perferendis sed nobis optio, consequuntur, ipsam, voluptate at voluptatibus aperiam?</p>
+                    <aside>
+                        <p>Autoria do artigo</p>
+                    </aside>
+
+                </article>
+                        
+                        <!-- <article>
+                </article> -->
+            </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por EU</p>
+
+    </footer>
+
+
+</body>
+</html>
