@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo Fixo de Tela</title>
     <style>
         body{
             height: 100vh;
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center center;
-            background-repeat: no-repeat;
+            background-repeat: repeat-y;
             background-size: cover;
+            background-attachment: fixed;
+
+            /* shorthand de background: 
+                color > image > position > repeat > {size} (nao funciona) > attachment*/
+
+            background: black url(imagens/wallpaper002.jpg) center center no-repeat  fixed;
+
+            
             
         }
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 18px;
             margin: auto;
             border: 2px solid black;
@@ -27,7 +35,7 @@
 <body>
     <main>
         <h1>Teste de imagem de Fundo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestias nemo deleniti facere minima, ab iure voluptates? Cum nam asperiores maxime dolore iure, magnam dolorum qui officiis adipisci. Ab, minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nihil ipsa reiciendis, earum consequuntur error quos magni aut deleniti itaque non temporibus at maiores pariatur impedit excepturi quisquam. Quia, porro! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci explicabo corporis eligendi repellat sit dolorem at quos, necessitatibus expedita assumenda maiores voluptates natus ipsa, aperiam eius placeat, praesentium dolorum distinctio!
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestias nemo deleniti facere minima, ab iure voluptates? Cum nam asperiores maxime dolore iure, magnam dolorum qui officiis adipisci. Ab, minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nihil ipsa reiciendis, earum consequuntur error quos magni aut deleniti itaque non temporibus at maiores pariatur impedit excepturi quisquam. Quia, porro! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci explicabo corporis eligendi repellat sit dolorem at quos, necessitatibus expedita assumenda maiores voluptates natus ipsa, aperiam eius placeat, praesentium dolorum distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempore beatae, voluptate nemo cumque natus unde eius dicta odio at magnam voluptatibus soluta libero! Similique dolores eius sunt soluta esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia rem neque voluptate natus possimus exercitationem placeat fugit dolorum, pariatur atque doloremque perferendis distinctio architecto eum sequi eos, laboriosam soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur itaque debitis unde excepturi, voluptatum culpa possimus! Rerum laudantium repellat tempore sequi nobis repudiandae, ea eaque odio error, dicta fugit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, earum quaerat, maxime totam sit iure facilis tempora ad expedita quos natus architecto rem ex cum ut reiciendis dicta illum ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste est odit assumenda minus incidunt, doloribus ipsum a deleniti, distinctio officia rem saepe officiis! Temporibus aspernatur perspiciatis est asperiores, quidem quo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste in commodi. Tenetur amet libero labore porro quaerat, ab facilis incidunt esse? Possimus esse numquam, adipisci culpa reiciendis delectus saepe. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus repudiandae libero doloribus explicabo culpa. Perferendis, minus eius amet eum fugiat praesentium ex rem nostrum illo aliquam ipsam, inventore deserunt enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, amet assumenda, facilis distinctio quisquam iusto vero odio accusantium officiis aliquid alias totam! Modi, sed necessitatibus magnam amet sint pariatur enim!
         </p>
     </main>
     
