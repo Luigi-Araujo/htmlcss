@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+header{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+h1{
+    font-size: 3em;
+}
+.txt{
+    text-align: left;
+    padding-left: 3em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+}
+.prlx>p{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.182);
+    width: 40vw;
+    margin: 3em;
+    padding: 0.3em;
+}
+#bug{
+    height: 50vh;
+    background-image: url(imagens/background001.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
